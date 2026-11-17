@@ -2,7 +2,7 @@
 
 **Doctoral Candidate in Information Science** at **Nara Institute of Science and Technology (NAIST)** (*Mathematical Informatics Lab*), researching **Computer Vision**, **Multi-Object Tracking**, and **Pedestrian Trajectory Prediction in Crowded Environments**.
 
-- 🔭 **Current Research:** Developing real-time tracking and trajectory prediction pipelines combining **YOLOv8** (detection), **MMPose** (pose estimation), and **Vision Transformers** (ReID) for occluded and crowded scenes.
+- 🔭 **Current Research:** Developing real-time tracking and trajectory prediction pipelines for occluded and crowded scenes.
 - 🌍 **International Collaborations:**
   - **University of Trento (Italy):** Erasmus+ International Credit Mobility (ICM) Scholar under Prof. Nicu Sebe & Prof. Paolo Rota.
   - **Kyoto University (Japan):** Research Team Member, Mobility Research Group (Graduate School of Informatics).
