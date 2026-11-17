@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himanshu Raturi — Portfolio & CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --accent: #1d4ed8;
+      --accent-soft: #eff6ff;
+      --border: #e2e8f0;
+      --tag-bg: #f1f5f9;
+      --tag-text: #334155;
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0b1120;
+      --surface: #111827;
+      --surface-alt: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #60a5fa;
+      --accent-soft: rgba(59, 130, 246, 0.14);
+      --border: #1e293b;
+      --tag-bg: #1e293b;
+      --tag-text: #cbd5e1;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .topbar-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 13px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+      color: #ffffff;
+    }
+
+    .layout {
+      max-width: 1180px;
+      margin: 18px auto 48px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    aside, .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    aside {
+      position: sticky;
+      top: 20px;
+    }
+
+    .profile-name {
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .profile-tagline {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    .profile-lab {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    .profile-bio {
+      margin-top: 12px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .contact-list {
+      list-style: none;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      font-size: 0.85rem;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      word-break: break-all;
+    }
+
+    .contact-list i {
+      width: 16px;
+      text-align: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .side-section {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .side-section h2, .main-section h2 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .edu-item {
+      margin-bottom: 14px;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-item h3 {
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .edu-degree {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .edu-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .skill-group {
+      margin-bottom: 14px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group h3 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+    }
+
+    .pill-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-weight: 500;
+    }
+
+    .pill-accent {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .course-list {
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .course-list li::before {
+      content: "• ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .entry {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .entry:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .entry-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .entry-subtitle {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .entry-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      background: var(--surface-alt);
+      padding: 3px 9px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .entry-bullets {
+      margin-top: 10px;
+      padding-left: 18px;
+      font-size: 0.91rem;
+      color: var(--text-muted);
+    }
+
+    .entry-bullets li {
+      margin-bottom: 5px;
+    }
+
+    .entry-tags {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .repo-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .repo-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .repo-card p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .repo-meta {
+      display: flex;
+      gap: 14px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        position: static;
+      }
+    }
+
+    @media print {
+      .topbar, #repos-section {
+        display: none !important;
+      }
+      body {
+        background: #ffffff;
+        color: #000000;
+      }
+      .layout {
+        grid-template-columns: 270px 1fr;
+        margin: 0;
+        padding: 0;
+        gap: 16px;
+      }
+      aside, .card {
+        box-shadow: none;
+        border: 1px solid #cbd5e1;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div id="last-updated">Loading profile...</div>
+    <div class="topbar-actions">
+      <a id="cv-download-btn" class="btn btn-primary" href="HimanshuCV-6.pdf" target="_blank" rel="noopener">
+        <i class="fa-solid fa-file-pdf"></i> Download CV (PDF)
+      </a>
+      <button class="btn" onclick="window.print()" title="Print or Save as PDF">
+        <i class="fa-solid fa-print"></i> Print
+      </button>
+      <button class="btn" id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Theme">
+        <i class="fa-solid fa-moon"></i> Theme
+      </button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside id="sidebar"></aside>
+    <main id="main-content"></main>
+  </div>
+
+  <script>
+    const ICON_MAP = {
+      email: 'fa-solid fa-envelope',
+      phone: 'fa-solid fa-phone',
+      linkedin: 'fa-brands fa-linkedin',
+      github: 'fa-brands fa-github',
+      scholar: 'fa-solid fa-graduation-cap',
+      website: 'fa-solid fa-globe'
+    };
+
+    function applySavedTheme() {
+      const saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('portfolio-theme', next);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    async function init() {
+      applySavedTheme();
+      const res = await fetch('data.json?v=' + Date.now());
+      const data = await res.json();
+
+      document.title = `${data.profile.name} — Academic & Engineering Portfolio`;
+      document.getElementById('last-updated').textContent = `Last Updated: ${data.meta.lastUpdated}`;
+
+      const cvBtn = document.getElementById('cv-download-btn');
+      if (data.meta.cvPdfPath) {
+        cvBtn.href = data.meta.cvPdfPath;
+      } else {
+        cvBtn.style.display = 'none';
+      }
+
+      renderSidebar(data);
+      renderMain(data);
+
+      if (data.meta.showLiveRepos && data.meta.githubUsername) {
+        loadGitHubRepos(data.meta.githubUsername, data.meta.maxRepos || 6);
+      }
+    }
+
+    function renderSidebar(data) {
+      const { profile, education, skills, coursework } = data;
+      const contactsHtml = profile.contacts.map(c => `
+        <li>
+          <i class="${ICON_MAP[c.type] || 'fa-solid fa-link'}"></i>
+          <a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.label)}</a>
+        </li>
+      `).join('');
+
+      const eduHtml = education.map(e => `
+        <div class="edu-item">
+          <h3>${escapeHtml(e.institution)}</h3>
+          <div class="edu-degree">${escapeHtml(e.degree)}</div>
+          <div class="edu-meta">${escapeHtml(e.period)} | ${escapeHtml(e.location)}</div>
+          ${e.detail ? `<div class="edu-meta">${escapeHtml(e.detail)}</div>` : ''}
+        </div>
+      `).join('');
+
+      document.getElementById('sidebar').innerHTML = `
+        <h1 class="profile-name">${escapeHtml(profile.name)}</h1>
+        <div class="profile-tagline">${escapeHtml(profile.tagline)}</div>
+        ${profile.lab ? `<div class="profile-lab">${escapeHtml(profile.lab)}</div>` : ''}
+        ${profile.bio ? `<p class="profile-bio">${escapeHtml(profile.bio)}</p>` : ''}
+
+        <ul class="contact-list">${contactsHtml}</ul>
+
+        <div class="side-section">
+          <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+          ${eduHtml}
+        </div>
+
+        <div class="side-section">
+          <h2><i class="fa-solid fa-code"></i> Skills & Tech</h2>
+          <div class="skill-group">
+            <h3>Research Areas</h3>
+            <div class="pill-wrap">
+              ${skills.researchAreas.map(s => `<span class="pill pill-accent">${escapeHtml(s)}</span>`).join('')}
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Proficient</h3>
+            <div class="pill-wrap">
+              ${skills.proficient.map(s => `<span class="pill">${escapeHtml(s)}</span>`).join('')}
+            </div>
+          </div>
+          ${skills.familiar && skills.familiar.length ? `
+          <div class="skill-group">
+            <h3>Familiar</h3>
+            <div class="pill-wrap">
+              ${skills.familiar.map(s => `<span class="pill">${escapeHtml(s)}</span>`).join('')}
+            </div>
+          </div>` : ''}
+        </div>
+
+        <div class="side-section">
+          <h2><i class="fa-solid fa-book"></i> Coursework</h2>
+          <div class="skill-group">
+            <h3>Graduate (NAIST)</h3>
+            <ul class="course-list">
+              ${coursework.graduate.map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Undergraduate</h3>
+            <ul class="course-list">
+              ${coursework.undergraduate.map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderMain(data) {
+      const main = document.getElementById('main-content');
+      let html = '';
+
+      if (data.publications && data.publications.length > 0) {
+        html += `
+          <section class="card main-section">
+            <h2><i class="fa-solid fa-scroll"></i> Publications</h2>
+            ${data.publications.map(pub => `
+              <div class="entry">
+                <div class="entry-header">
+                  <div>
+                    <div class="entry-title">${escapeHtml(pub.title)}</div>
+                    <div class="entry-subtitle">${escapeHtml(pub.authors)}</div>
+                  </div>
+                  <div class="entry-period">${escapeHtml(pub.venue)}</div>
+                </div>
+              </div>
+            `).join('')}
+          </section>
+        `;
+      }
+
+      html += `
+        <section class="card main-section">
+          <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+          ${data.experience.map(exp => `
+            <div class="entry">
+              <div class="entry-header">
+                <div>
+                  <div class="entry-title">${escapeHtml(exp.organization)}</div>
+                  <div class="entry-subtitle">${escapeHtml(exp.role)}</div>
+                </div>
+                <div class="entry-period">${escapeHtml(exp.period)} | ${escapeHtml(exp.location)}</div>
+              </div>
+              <ul class="entry-bullets">
+                ${exp.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </section>
+      `;
+
+      html += `
+        <section class="card main-section">
+          <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+          ${data.projects.map(proj => {
+            const sub = [proj.category, proj.affiliation].filter(Boolean).join(' · ');
+            const meta = proj.period ? `<div class="entry-period">${escapeHtml(proj.period)}</div>` : '';
+            return `
+              <div class="entry">
+                <div class="entry-header">
+                  <div>
+                    <div class="entry-title">${escapeHtml(proj.title)}</div>
+                    ${sub ? `<div class="entry-subtitle">${escapeHtml(sub)}</div>` : ''}
+                  </div>
+                  ${meta}
+                </div>
+                <ul class="entry-bullets">
+                  ${proj.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join('')}
+                </ul>
+                ${proj.tags && proj.tags.length ? `
+                  <div class="entry-tags">
+                    ${proj.tags.map(t => `<span class="pill">${escapeHtml(t)}</span>`).join('')}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+        </section>
+      `;
+
+      if (data.meta.showLiveRepos) {
+        html += `
+          <section class="card main-section" id="repos-section" style="display:none;">
+            <h2><i class="fa-brands fa-github"></i> Latest GitHub Repositories (Auto-Synced)</h2>
+            <div class="repo-grid" id="repo-grid"></div>
+          </section>
+        `;
+      }
+
+      main.innerHTML = html;
+    }
+
+    async function loadGitHubRepos(username, maxRepos) {
+      try {
+        const res = await fetch(`https://api.github.com/users/${encodeURIComponent(username)}/repos?sort=updated&per_page=20`);
+        if (!res.ok) return;
+        const repos = await res.json();
+        const filtered = repos
+          .filter(r => !r.fork && r.name.toLowerCase() !== username.toLowerCase() && !r.name.toLowerCase().endsWith('.github.io'))
+          .slice(0, maxRepos);
+
+        if (!filtered.length) return;
+
+        const section = document.getElementById('repos-section');
+        const grid = document.getElementById('repo-grid');
+        section.style.display = 'block';
+
+        grid.innerHTML = filtered.map(r => `
+          <div class="repo-card">
+            <div>
+              <h3><a href="${escapeHtml(r.html_url)}" target="_blank" rel="noopener">${escapeHtml(r.name)}</a></h3>
+              <p>${escapeHtml(r.description || 'Computer vision & information science repository.')}</p>
+            </div>
+            <div class="repo-meta">
+              ${r.language ? `<span>● ${escapeHtml(r.language)}</span>` : ''}
+              <span>★ ${r.stargazers_count}</span>
+              <span>⑂ ${r.forks_count}</span>
+            </div>
+          </div>
+        `).join('');
+      } catch (e) {
+        // Silently skip if GitHub API rate limit is reached
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

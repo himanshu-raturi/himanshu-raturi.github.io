@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "lastUpdated": "10th November 2026",
+    "cvPdfPath": "HimanshuCV-6.pdf",
+    "githubUsername": "himanshu-raturi",
+    "showLiveRepos": true,
+    "maxRepos": 6
+  },
+  "profile": {
+    "name": "Himanshu Raturi",
+    "tagline": "Doctoral Candidate in Information Science & Computer Vision",
+    "lab": "Mathematical Informatics Lab, NAIST",
+    "bio": "Researching real-time multi-object tracking, pose estimation, and trajectory prediction in occluded and crowded environments.",
+    "contacts": [
+      {
+        "type": "email",
+        "label": "raturi.himanshu.rf4@naist.ac.jp",
+        "url": "mailto:raturi.himanshu.rf4@naist.ac.jp"
+      },
+      {
+        "type": "email",
+        "label": "himanshurishikesh731@gmail.com",
+        "url": "mailto:himanshurishikesh731@gmail.com"
+      },
+      {
+        "type": "phone",
+        "label": "(+81) 80-4257-2399",
+        "url": "tel:+818042572399"
+      },
+      {
+        "type": "linkedin",
+        "label": "linkedin.com/in/himanshuraturi",
+        "url": "https://linkedin.com/in/himanshuraturi"
+      },
+      {
+        "type": "github",
+        "label": "github.com/himanshu-raturi",
+        "url": "https://github.com/himanshu-raturi"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Nara Institute of Science and Technology",
+      "degree": "Doctoral Candidate in Information Science",
+      "period": "Grad. 2029",
+      "location": "Nara, Japan",
+      "detail": "Mathematical Informatics Lab"
+    },
+    {
+      "institution": "Nara Institute of Science and Technology",
+      "degree": "M.S. in Information Science",
+      "period": "Grad. 2026",
+      "location": "Nara, Japan",
+      "detail": "Mathematical Informatics Lab"
+    },
+    {
+      "institution": "Himalayan School of Science & Technology",
+      "degree": "B.Tech in Computer Science",
+      "period": "Grad. 2020",
+      "location": "Dehradun, India",
+      "detail": ""
+    }
+  ],
+  "skills": {
+    "researchAreas": [
+      "Computer Vision",
+      "Deep Learning",
+      "Pedestrian Tracking",
+      "Transformers",
+      "Sentiment Analysis",
+      "NLP"
+    ],
+    "proficient": [
+      "Python",
+      "PyTorch",
+      "C++",
+      "C",
+      "YOLOv8",
+      "MMPose",
+      "ViT",
+      "Django",
+      "LaTeX"
+    ],
+    "familiar": [
+      "Git",
+      "SQLite",
+      "Dialogflow"
+    ]
+  },
+  "coursework": {
+    "graduate": [
+      "Robot Learning and Control",
+      "Data Mining",
+      "Natural Language Processing",
+      "Software Engineering",
+      "Systems Resource Management",
+      "Human Information Processing",
+      "Mathematical Models in Biology"
+    ],
+    "undergraduate": [
+      "Cloud Computing",
+      "Computer Networks",
+      "Operating Systems",
+      "Web Technology",
+      "Data Structures & Algorithms",
+      "Database Management Systems",
+      "Artificial Intelligence"
+    ]
+  },
+  "publications": [],
+  "experience": [
+    {
+      "organization": "University of Trento",
+      "role": "Incoming Erasmus+ Scholar",
+      "period": "Apr 2026 - Present",
+      "location": "Trento, Italy",
+      "bullets": [
+        "Selected for the Erasmus+ International Credit Mobility (ICM) program under the supervision of Prof. Nicu Sebe and Prof. Paolo Rota.",
+        "Conducted advanced computer vision and machine learning research focused on multi-object tracking and visual analysis in crowded environments."
+      ]
+    },
+    {
+      "organization": "Kyoto University",
+      "role": "Research Team Member",
+      "period": "July 2025 - Present",
+      "location": "Kyoto, Japan",
+      "bullets": [
+        "Member of the Mobility Research Group at the Graduate School of Informatics.",
+        "Collaborating on mobility analysis and mathematical modeling projects."
+      ]
+    },
+    {
+      "organization": "Internshala",
+      "role": "Summer Trainee",
+      "period": "July 2019",
+      "location": "Remote/India",
+      "bullets": [
+        "Developed desktop applications using Python and the PyQt framework.",
+        "Implemented backend functionality using SQLite databases for efficient data management."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Real-Time Tracking of Individuals in Crowded Environments",
+      "category": "Research Project",
+      "affiliation": "NAIST",
+      "period": "",
+      "tags": [
+        "YOLOv8",
+        "MMPose",
+        "ViT",
+        "Multi-Object Tracking"
+      ],
+      "links": {},
+      "bullets": [
+        "Developing a tracking pipeline combining YOLOv8 (detection), MMPose (pose estimation), and ViT (ReID).",
+        "Focused on improving trajectory prediction accuracy in occluded and crowded scenes."
+      ]
+    },
+    {
+      "title": "Shopping Assistant Chatbot",
+      "category": "Academic Project",
+      "affiliation": "",
+      "period": "June 2020",
+      "tags": [
+        "Dialogflow",
+        "Django",
+        "Recommender System",
+        "Heroku"
+      ],
+      "links": {},
+      "bullets": [
+        "Built a conversational agent for personal shopping using Dialogflow and Django.",
+        "Integrated a recommender system to suggest products based on user preferences.",
+        "Deployed the full stack application on Heroku."
+      ]
+    },
+    {
+      "title": "Fantasy Cricket Platform",
+      "category": "Full Stack Development",
+      "affiliation": "",
+      "period": "July 2019",
+      "tags": [
+        "Full Stack",
+        "Algorithms",
+        "Web App"
+      ],
+      "links": {},
+      "bullets": [
+        "Developed an online fantasy sports game where users draft virtual teams based on real-world player statistics.",
+        "Implemented ranking algorithms to calculate user scores based on live match performance."
+      ]
+    },
+    {
+      "title": "YouTube Media Automation",
+      "category": "Python Automation",
+      "affiliation": "",
+      "period": "Aug 2019 - Apr 2021",
+      "tags": [
+        "Python",
+        "Automation",
+        "Desktop App"
+      ],
+      "links": {},
+      "bullets": [
+        "Created a desktop application and subsequent bot to automate the extraction of audio (MP3) from YouTube videos.",
+        "Focused on high-quality conversion and streamlined user experience."
+      ]
+    }
+  ]
+}
